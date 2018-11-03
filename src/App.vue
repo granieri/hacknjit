@@ -33,6 +33,10 @@ body, html {
   height: 100vh;
 }
 
+a {
+  color: #4f6d8c;
+}
+
 header {
   background: #87a9cc;
   border-bottom: 3px solid #4f6d8c;
