@@ -3,9 +3,9 @@
     <header>
 
       <h1>loglog</h1>
-      <a id="signOut" href="#" onclick="signOut();">Sign out</a>
+      <router-link id="signOut" to="/Login" onclick="signOut();">Sign out</router-link>
     </header>
-    <router-view/>
+    <router-view id="MainRV" />
     <footer class="footer">
 
     </footer>
