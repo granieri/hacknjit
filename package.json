@@ -1,8 +1,8 @@
 {
-  "name": "hack njit app",
+  "name": "loglog",
   "version": "1.0.0",
   "description": "This is going to be something",
-  "author": "max & erik",
+  "author": "max, erik, janet & jason",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
