@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="stream">
   <p>hi</p>
   <p>there</p>
  </div>
@@ -17,6 +17,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.stream {
+  margin: 15vh 0 10vh;
+  overflow-y: auto;
+}
+
 h1, h2 {
   font-weight: normal;
 }

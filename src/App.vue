@@ -5,6 +5,7 @@
     </header>
     <router-view/>
     <footer class="footer">
+
     </footer>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
 </script>
 
 <style>
-body {
+body, html {
   margin: 0;
   padding: 0;
 }
@@ -25,15 +26,20 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 header {
   background: #87a9cc;
   border-bottom: 3px solid #4f6d8c;
-  text-align: center;
-  padding: 10px 0;
   width: 100%;
-  position: fixed;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 header h1 {
@@ -58,7 +64,6 @@ header h1 {
   border-top: 3px solid #4f6d8c;
   height: 10vh;
   width: 100%;
-  position: fixed;
   bottom: 0;
 }
 </style>
