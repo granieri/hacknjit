@@ -1,12 +1,12 @@
 <template>
   <div class="stream">
-    <card></card>
+    Add a new log
  </div>
 </template>
 
 <script>
 export default {
-  name: 'Stream',
+  name: 'New',
   data () {
     return {
     }
