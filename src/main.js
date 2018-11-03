@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Card from './components/Card'
 
 Vue.config.productionTip = false
+
+Vue.component('card', Card)
 
 /* eslint-disable no-new */
 new Vue({

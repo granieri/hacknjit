@@ -22,6 +22,7 @@ export default {
 body, html {
   margin: 0;
   padding: 0;
+  background: #f2f2f2;
 }
 
 #app {
@@ -32,6 +33,10 @@ body, html {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+}
+
+a {
+  color: #4f6d8c;
 }
 
 header {
