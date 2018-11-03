@@ -2,6 +2,7 @@
   <div class="stream">
   <p>hi</p>
   <p>there</p>
+  <router-link to="/Login">Login</router-link>
  </div>
 </template>
 
