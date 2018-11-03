@@ -1,13 +1,12 @@
 <template>
-  <div>
-  <p>hi</p>
-  <p>there</p>
+  <div class="stream">
+    <card></card>
  </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Stream',
   data () {
     return {
     }
@@ -17,6 +16,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.stream {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+}
+
 h1, h2 {
   font-weight: normal;
 }
