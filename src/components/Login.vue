@@ -1,16 +1,6 @@
 <template>
   <div class="login">
-    <form id="login" class="loginForm">
-      <label>
-        User ID:
-      </label>
-      <input type="text" id="username"/>
-      <label>
-        Password:
-      </label>
-      <input type="password" id="password"/>
-      <input type="submit" id="submit"/>
-    </form>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   </div>
 </template>
 
@@ -18,15 +8,8 @@
 <style scoped>
   .login {
     margin: auto;
-    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  .loginForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
   }
 </style>

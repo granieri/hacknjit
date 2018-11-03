@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <header>
-      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+
       <h1>loglog</h1>
-      <a href="#" onclick="signOut();">Sign out</a>
+      <a id="signOut" href="#" onclick="signOut();">Sign out</a>
     </header>
     <router-view/>
     <footer class="footer">
@@ -72,5 +72,8 @@ header h1 {
   height: 10vh;
   width: 100%;
   bottom: 0;
+}
+#sigOut {
+  visibility: collapse;
 }
 </style>
