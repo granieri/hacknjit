@@ -27,6 +27,8 @@
           <tbody>
             <tr>
               <td>Type 1</td>
+              <td></td>
+              <td></td>
             </tr>
           </tbody>
         </table>
@@ -48,7 +50,7 @@ export default {
     let desc = document.getElementById('description')
     let remaining = document.getElementById('remaining')
     let max = 140
-    desc.addEventListener ('keyup', (e) => {
+    desc.addEventListener('keyup', (e) => {
       let cur_len = max - e.target.value.length
       remaining.innerHTML = cur_len
       if (cur_len < 20) remaining.style.color = 'red'
