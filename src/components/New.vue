@@ -45,14 +45,14 @@ export default {
     }
   },
   mounted () {
-    let desc = document.getElementById("description")
-    let remaining = document.getElementById("remaining")
+    let desc = document.getElementById('description')
+    let remaining = document.getElementById('remaining')
     let max = 140
-    desc.addEventListener("keyup", (e) => {
-      let cur_len = max - e.target.value.length;
-      remaining.innerHTML = cur_len;
-      if(cur_len < 20) remaining.style.color = "red";
-      else remaining.style.color = "black";
+    desc.addEventListener ('keyup', (e) => {
+      let cur_len = max - e.target.value.length
+      remaining.innerHTML = cur_len
+      if (cur_len < 20) remaining.style.color = 'red'
+      else remaining.style.color = 'black'
     })
   }
 }
@@ -108,8 +108,8 @@ textarea {
   background: #ff4d94;
 }
 
-.type_ref {
-  display: none;
+.type_popup {
+  z-index: 999;
 }
 
 form {
