@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <form id="login">
+    <form id="login" class="loginForm">
       <label>
         User ID:
       </label>
@@ -14,14 +14,19 @@
   </div>
 </template>
 
-<script>
-
-</script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .login{
+  .login {
+    margin: auto;
+    width: 20%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+  }
+  .loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
   }
 </style>
