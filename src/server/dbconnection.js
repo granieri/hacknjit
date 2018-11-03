@@ -7,10 +7,3 @@ export var con = mysql.createConnection({
   database: "hacknjit",
   insecureAuth : true
 });
-
-export dbconnect(con) {
-  con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-})
-}
