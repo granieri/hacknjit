@@ -73,7 +73,7 @@ header h1 {
   width: 100%;
   bottom: 0;
 }
-#sigOut {
+#signOut {
   visibility: collapse;
 }
 </style>
