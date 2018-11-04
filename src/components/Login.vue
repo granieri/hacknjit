@@ -7,22 +7,7 @@
     <div class='g-signin2' data-onsuccess='onSignIn' data-theme='dark'></div>
     <span id="MiddleButtons">
       <br />
-      <nav>
-        <ul class="nav2">
-          <router-link to="/new" tag="li">
-            <i class="fa fa-plus"></i>
-            <span>new</span>
-          </router-link>
-          <router-link to="/stream" tag="li">
-            <i class="fa fa-user"></i>
-            <span>me</span>
-          </router-link>
-          <router-link to="/" tag="li">
-            <i class="fa fa-line-chart"></i>
-            <span>insights</span>
-          </router-link>
-        </ul>
-      </nav>
+      <img class="poop" src="https://cdn1.vox-cdn.com/uploads/chorus_asset/file/7169531/Poop_Emoji.png"/>
     </span>
   </div>
 </template>
@@ -61,53 +46,8 @@ export default {
 
 
   }
-  nav {
-    margin: auto;
+  .poop{
+    height: 20%;
   }
-  nav .nav2{
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-  }
-  nav .nav2 li{
-    text-decoration: none;
-    margin: 0px;
-    background: #87a9cc;
-    display:block;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
 
-    height:40px;
-    width:60px;
-    padding: 60px 20px 0px 20px;
-
-    margin: 2px;
-    border-color: #e2e2e2;
-    border-style:solid;
-    border-top: 0px;
-    border-left: 0px;
-    border-bottom: 5px;
-    border-right: 5px;
-
-
-  }
-  nav .nav2 span{
-    height:40px;
-    width:60px;
-    padding: 20px 20px 40px 20px;
-      color: #7a5c3d;
-  }
-  nav .nav2 li:hover{
-    background: #8798cc;
-    transition: background 0.2s;
-    border-top: 5px;
-    border-left: 5px;
-    border-bottom: 0px;
-    border-right: 0px;
-
-  }
 </style>
