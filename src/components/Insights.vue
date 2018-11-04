@@ -9,19 +9,50 @@
 import {GoogleCharts} from 'google-charts';
 
 export default {
+  data() {
+    return {
+      poops_by_day: {}
+    }
+  },
+  beforeMount () {
+    let url = 'http://localhost:8081'
+    this.$store.dispatch('set_user', login)
+
+    axios.get(url+'/getinsight/'+login.id)
+      .then((response) => {
+        res = response.data
+        for(let i=0;i<res.length;i++){
+          if(res[i].dayoftheweek == 1){
+            poops_by_day.mon = res.count
+          } else if (res[i].dayoftheweek == 2){
+            poops_by_day.tues == res.count
+          } else if (res[i].dayoftheweek == 3){
+            poops_by_day.wed == res.count
+          } else if (res[i].dayoftheweek == 4){
+            poops_by_day.thur == res.count
+          } else if (res[i].dayoftheweek == 5){
+            poops_by_day.fri == res.count
+          } else if (res[i].dayoftheweek == 6){
+            poops_by_day.sat == res.count
+          } else if (res[i].dayoftheweek == 7){
+            poops_by_day.sun == res.count
+          }
+          }
+        })
+  },
   mounted () {
     GoogleCharts.load(drawChart);
 
     function drawChart() {
         const data = GoogleCharts.api.visualization.arrayToDataTable([
             ['Day', 'Bowel movements'],
-            ['Sun', 6],
-            ['Mon', 2],
-            ['Tues', 1],
-            ['Wed', 5],
-            ['Thur', 4],
-            ['Fri', 2],
-            ['Sat', 0]
+            ['Sun', this.poops_by_day.sun],
+            ['Mon', this.poops_by_day.mon],
+            ['Tues', this.poops_by_day.tues],
+            ['Wed', this.poops_by_day.wed],
+            ['Thur', this.poops_by_day.thur],
+            ['Fri', this.poops_by_day.fri],
+            ['Sat', this.poops_by_day.sat]
         ])
         const options = {
           title: 'Bowel movements this week',

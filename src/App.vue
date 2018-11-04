@@ -127,11 +127,6 @@ nav .nav li span {
   width: auto;
 }
 
-.nav li:hover i{
-    color: #222;
-    transition: color 0.1s;
-}
-
 #signOut {
   text-decoration: none;
   visibility: collapse;
@@ -173,6 +168,11 @@ nav .nav li span {
     max-width: 65px;
     margin: 0 20px;
     background: none;
+  }
+
+  .nav li:hover i{
+      color: #222;
+      transition: color 0.2s;
   }
 
   #MainRV {
