@@ -81,6 +81,9 @@ export default {
     let url = 'http://localhost:8081'
     send.addEventListener('click', function(e){
       axios.get(url+'/insertpoop/'+login.id+'/'+type.value+'/'+ desc.value+'/here')
+        .then(response => {
+          this.$router.push('/')
+        })
     })
   }
 }
