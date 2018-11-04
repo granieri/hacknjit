@@ -12,6 +12,5 @@ var server = app.listen(8081, function () {
 
 app.get('/listpoop/:userid/', function (req, res) {
   var thing = JSON.stringify(listpoop.listpoop(req.params.userid))
-  console.log(thing)
-    res.end();
+  res.end(thing);
 })

@@ -11,12 +11,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-<<<<<<< HEAD
     "express": "^4.16.4",
     "http": "0.0.0",
-=======
     "axios": "^0.18.0",
->>>>>>> 882a36b4c799dfbfc8f9439c333bbc7502b8f22f
     "mysql": "^2.16.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

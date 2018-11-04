@@ -19,11 +19,6 @@ export default new Router({
       component: Stream
     },
     {
-      path: '/Login',
-      name: 'Login',
-      component: Login
-    },
-    {
       path: '/new',
       name: 'New',
       component: New

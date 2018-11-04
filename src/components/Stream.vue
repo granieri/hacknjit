@@ -18,8 +18,8 @@ export default {
     let url = 'http://localhost:8081'
     axios.get(url)
       .then((response) => {
-        
-      });
+
+      })
   }
 }
 </script>
