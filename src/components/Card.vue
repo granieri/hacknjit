@@ -17,7 +17,7 @@ export default {
   name: 'card',
   props: ['first', 'last', 'desc', 'type', 'date'],
   computed: {
-    file_name: '../assets/type' + this.type + 'poop.png'
+    file_name () { '../assets/type' + this.type + 'poop.png' }
   }
 }
 </script>
