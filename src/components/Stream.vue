@@ -11,15 +11,19 @@ export default {
   name: 'Stream',
   data () {
     return {
-      poops: []
+      poops: [],
+      login: login
     }
   },
   created () {
     let url = 'http://localhost:8081'
-    axios.get(url)
+    axios.get(url+'/listpoops/'+login.id)
       .then((response) => {
 
-      })
+    })
+  },
+  mounted () {
+    console.log(login.id);
   }
 }
 </script>

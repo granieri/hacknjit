@@ -17,6 +17,7 @@
         <option value="5">Type 5 - Soft blobs</option>
         <option value="6">Type 5 - Mushy, ragged</option>
         <option value="7">Type 7 - Liquid</option>
+        <option value="0">False alarm</option>
       </select>
       <div class="type_ref" id="modal_btn">
         <a href="#">image reference</a>
@@ -39,9 +40,11 @@ export default {
   name: 'New',
   data () {
     return {
+      login: login
     }
   },
   mounted () {
+    console.log(login)
     let desc = document.getElementById('description')
     let remaining = document.getElementById('remaining')
     let max = 140
