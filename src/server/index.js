@@ -4,13 +4,15 @@ const getpoop = require('./getpoop')
 const insertpoop = require('./insertpoop')
 const checkuser = require('./checkuser')
 const insertuser = require('./insertuser')
+const cors = require('cors')
 var app = express();
 
+app.use(cors())
 var server = app.listen(8081, function () {
     var host = server.address().address
     var port = server.address().port
 
-    console.log("app listening at http://%s:%s", host, port)
+    console.log("app listening at http://localhost:%s", port)
 });
 
 

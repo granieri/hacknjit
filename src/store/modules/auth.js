@@ -36,13 +36,17 @@ const actions = {
     commit('LOG_OUT_M')
   },
   set_user ({ commit }, user) {
+    console.log("AUTH DISPATCH")
     axios.get(url+'/checkuser/'+user.id)
       .then((response) => {
-        if(!response){
+        if(response.data.length == 0){
+          console.log('no user')
+          console.log(user.id)
+          console.log(url+'/insertuser/'+user.id+'/'+user.firstname+'/'+user.lastname+'/'+user.email)
           axios.get(url+'/insertuser/'+user.id+'/'+user.firstname+'/'+user.lastname+'/'+user.email)
             // error handling
         }
-      commit('SET_USER_ID_M', user)
+      commit('SET_USER_M', user)
     })
   }
 }

@@ -17,9 +17,9 @@ export default {
   },
   mounted () {
     let url = 'http://localhost:8081'
-    this.$store.dispatch('set_user', login);
-    console.log(this.$store.getters.get_user)
-    axios.get(url+'/listpoops/'+login.id)
+    this.$store.dispatch('set_user', login)
+    console.log(this.$store.state.user)
+    axios.get(url+'/listpoop/'+login.id)
       .then((response) => {
         console.log(response);
     })
