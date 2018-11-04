@@ -101,8 +101,9 @@ nav .nav {
 }
 
 nav .nav li {
-  padding: 0;
-  margin: 0;
+  display:block;
+  padding: 0px 25px 0px 25px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,11 +111,22 @@ nav .nav li {
   font-size: 1.2em;
   height: 10vh;
   color: #7a5c3d;
+  text-align: center;
 }
 
 nav .nav li i {
   font-size: 1.5em;
   color: #fff;
+  width: 50px;
+}
+
+nav .nav li span {
+  width: 50px;
+}
+
+.nav li:hover{
+    background: #8798cc;
+    transition: background 0.5s;
 }
 
 #signOut {
