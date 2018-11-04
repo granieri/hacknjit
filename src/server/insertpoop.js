@@ -1,15 +1,17 @@
-import * as dbc from './dbconnection';
+const dbc = require('./dbconnection')
 
-export exec() {
-  let con = dbc.con;
+var exports = module.exports = {}
 
-  con.connect(function(err) {
-  if (err) throw err;
-  var sql = "INSERT INTO poops (user_id, datetime, type, description, location) VALUES ('" + user_id + "', '" + datetime +"',
-  '" + type + "', '" + description + "', '" + location + "')";
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("1 record inserted");
-    });
-  });
+exports.insertpoop = function (userid, type, description, location){
+  return new Promise(function(resolve, reject){
+    var conn = dbc.con;
+    var sql = "INSERT INTO poops (user_id, datetime, type, description, location) VALUES ('" + userid + "', '" + Math.round(new Date().getTime()/1000) + "', '" + type + "', '" + description + "', '" + location + "');";
+    conn.query(sql, function(err, rows, fields){
+      if(err) return reject(err)
+      resolve(rows)
+    })
+  })
 }
+
+
+//"INSERT INTO poops (user_id, datetime, type, description, location) VALUES ('" + user_id + "', '" + datetime +"',
