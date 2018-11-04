@@ -3,18 +3,35 @@
     <header>
 
       <h1>loglog</h1>
-      <router-link id="signOut" to="/Login" onclick="signOut();">Sign out</router-link>
+      <router-link id="signOut" to="/login" onclick="signOut()">Sign out</router-link>
     </header>
     <router-view id="MainRV" />
     <footer class="footer">
-
+      <nav>
+        <ul class="nav">
+          <router-link to="/new" tag="li">
+            <i class="fa fa-plus"></i>
+            <span>new</span>
+          </router-link>
+          <router-link to="/stream" tag="li">
+            <i class="fa fa-user"></i>
+            <span>me</span>
+          </router-link>
+          <router-link to="/" tag="li">
+            <i class="fa fa-line-chart"></i>
+            <span>insights</span>
+          </router-link>
+        </ul>
+      </nav>
     </footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'loglog'
+  name: 'loglog',
+  mounted () {
+  }
 }
 </script>
 
@@ -73,6 +90,33 @@ header h1 {
   width: 100%;
   bottom: 0;
 }
+
+nav .nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav .nav li {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2em;
+  height: 10vh;
+  color: #7a5c3d;
+}
+
+nav .nav li i {
+  font-size: 1.5em;
+  color: #fff;
+}
+
 #signOut {
   visibility: collapse;
 }
