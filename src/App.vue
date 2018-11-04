@@ -129,6 +129,7 @@ nav .nav li span {
 
 .nav li:hover i{
     color: #222;
+    transition: color 0.1s;
 }
 
 #signOut {

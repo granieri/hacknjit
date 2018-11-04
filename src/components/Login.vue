@@ -99,7 +99,7 @@ export default {
     height:40px;
     width:60px;
     padding: 20px 20px 40px 20px;
-    color: black;
+      color: #7a5c3d;
   }
   nav .nav2 li:hover{
     background: #8798cc;
