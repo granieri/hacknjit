@@ -1,6 +1,10 @@
 <template>
   <div class='login'>
     <div class='g-signin2' data-onsuccess='onSignIn' data-theme='dark'></div>
+    <router-link to="/New">New</router-link>
+    <router-link to="/Stream">Stream</router-link>
+    <router-link to="/Card">Card</router-link>
+
   </div>
 </template>
 
