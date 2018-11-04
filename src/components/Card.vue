@@ -1,16 +1,20 @@
 <template>
   <article class="card">
     <div class="user">
-      <span class="username">username</span>
+      <span class="username">{{ first }} {{ last }}</span>
     </div>
-    <div class="date">25 September 2018 3:59pm</div>
+    <div class="date">{{ date }}</div>
     <div class="poop_icon"></div>
-    <section class="description">Lorem ipsum dolor sit amet</section>
+    <section class="description">{{ desc }}</section>
     <section class="interact"></section>
   </article>
 </template>
 
 <script>
+export default {
+  name: 'card',
+  props: ['first', 'last', 'desc', 'type', 'date']
+}
 </script>
 
 <style scoped>

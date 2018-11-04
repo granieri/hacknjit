@@ -1,6 +1,8 @@
 <template>
   <div class="stream">
-    <card></card>
+    <span v-for="poop in poops">
+      <card first="poop.user_id" desc="poop.description" date="poop.datetime"></card>
+    </span>
  </div>
 </template>
 
@@ -19,9 +21,12 @@ export default {
     let url = 'http://localhost:8081'
     this.$store.dispatch('set_user', login)
     console.log(this.$store.state.user)
-    axios.get(url+'/listpoop/'+login.id)
+    axios.get(url+'/listpoop/'+5) //login.id
       .then((response) => {
-        console.log(response);
+        poops_data = response.data
+        for(let i=0;i<poops_data;i++){
+          poops.push(poops_data[i])
+        }
     })
   }
 }

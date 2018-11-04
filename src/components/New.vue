@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'New',
   data () {
@@ -45,6 +47,7 @@ export default {
   },
   mounted () {
     console.log(login)
+    this.$store.dispatch('set_user', login)
     let desc = document.getElementById('description')
     let remaining = document.getElementById('remaining')
     let max = 140
@@ -72,6 +75,13 @@ export default {
         modal.style.display = 'none'
       }
     }
+
+    let send = document.getElementsByClassName('send')[0];
+    let type = document.getElementById('type')
+    let url = 'http://localhost:8081/'
+    send.addEventListener('click', function(e){
+      axios.get(url+login.id+'/'+type.value+'/'+ desc.value+'/'+'/here')
+    })
   }
 }
 </script>
