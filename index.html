@@ -19,6 +19,8 @@
         console.log('User signed out.')
         login = {"success": false}
         document.getElementById('signOut').style.visibility = 'collapse'
+        document.getElementById('words').style.visibility = 'visible'
+        document.getElementById('MiddleButtons').style.visibility = 'collapse'
       })
       setTimeout(function() {
         document.location.reload()
@@ -41,6 +43,8 @@
       var idToken = googleUser.getAuthResponse().id_token
       console.log('ID Token: ' + idToken)
       document.getElementById('signOut').style.visibility = 'visible'
+      document.getElementById('words').style.visibility = 'collapse'
+      document.getElementById('MiddleButtons').style.visibility = 'visible'
     }
     </script>
   </head>
