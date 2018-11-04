@@ -1,6 +1,6 @@
 # Loglog
 
-An app to log your logs!
+An app to log your logs! (programmers: not that kind of log)
 
 This app was built for HackNJIT! Loglog uses Nodejs with Express and MySQL on the backend with Vue and axios on the front end. 
 

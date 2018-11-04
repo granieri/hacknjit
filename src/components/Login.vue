@@ -1,6 +1,7 @@
 <template>
   <div class='login'>
-    <div class='g-signin2' data-onsuccess='onSignIn' data-theme='dark' id="signin"></div>
+    <div class='g-signin2' data-onsuccess='onSignIn' data-theme='dark'></div>
+
   </div>
 </template>
 
