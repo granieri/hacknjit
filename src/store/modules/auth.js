@@ -12,7 +12,7 @@ const mutations = {
 }
 
 const getters = {
-  get_logged_in(state){
+  get_logged_in (state) {
     return state.logged_in
   }
 }
