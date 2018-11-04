@@ -4,7 +4,9 @@
       <span class="username">{{ first }} {{ last }}</span>
     </div>
     <div class="date">{{ date }}</div>
-    <div class="poop_icon"></div>
+    <div class="poop_icon">
+      <img :src="file_name" />
+    </div>
     <section class="description">{{ desc }}</section>
     <section class="interact"></section>
   </article>
@@ -13,7 +15,10 @@
 <script>
 export default {
   name: 'card',
-  props: ['first', 'last', 'desc', 'type', 'date']
+  props: ['first', 'last', 'desc', 'type', 'date'],
+  computed: {
+    file_name: '../assets/type' + this.type + 'poop.png'
+  }
 }
 </script>
 
