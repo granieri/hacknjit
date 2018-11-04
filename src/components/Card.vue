@@ -98,12 +98,9 @@ export default {
   background-size: 50px;
 }
 
-
-
-
 @media only screen and (min-width: 500px){
   .card {
-    width: 30vw;
+    width: 25vw;
     min-width: 300px;
     margin: 2vh 2vw;
     box-shadow: 5px 5px 0px 0px rgba(143,143,143,1);
