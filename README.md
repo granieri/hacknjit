@@ -10,7 +10,8 @@ You will need the following softwares to run this thing: MySQL Workbench, Node 1
 
 ### Instructions
 First, clone the repository to your local machine. Import the database provided into MySQL Workbench. Make sure the configuration matches the following:
-```{
+```
+{
   host: "localhost",
   user: "root",
   password: "password",
