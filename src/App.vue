@@ -132,7 +132,12 @@ nav .nav li span {
 }
 
 #signOut {
+  text-decoration: none;
   visibility: collapse;
+  color: #7a5c3d;
+}
+#signOut:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 500px){
