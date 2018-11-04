@@ -15,7 +15,7 @@
         <option value="3">Type 3 - Sausage-shaped with cracks</option>
         <option value="4">Type 4 - Smooth sausage</option>
         <option value="5">Type 5 - Soft blobs</option>
-        <option value="6">Type 5 - Mushy, ragged</option>
+        <option value="6">Type 6 - Mushy, ragged</option>
         <option value="7">Type 7 - Liquid</option>
         <option value="0">False alarm</option>
       </select>
