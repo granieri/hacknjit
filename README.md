@@ -10,6 +10,9 @@ This app was built for HackNJIT! Loglog uses Nodejs with Express and MySQL on th
 # install dependencies
 npm install
 
+# run express server to connect to mySQL databse
+npm run serve
+
 # serve with hot reload at localhost:8080
 npm run dev
 
