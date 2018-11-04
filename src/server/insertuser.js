@@ -2,14 +2,13 @@ const dbc = require('./dbconnection')
 
 var exports = module.exports = {}
 
-exports.getpoop = function (poopid){
+exports.insertuser = function (userid, firstname, lastname, email){
   return new Promise(function(resolve, reject){
     var conn = dbc.con;
-    var sql = "SELECT * FROM poops WHERE id = '" + poopid + "';";
+    var sql = "INSERT INTO user (id, firstname, lastname, email) VALUES ('" + userid + "', '" + firstname + "', '" + lastname + "', '" + email + "');";
     conn.query(sql, function(err, rows, fields){
       if(err) return reject(err)
       resolve(rows)
     })
   })
 }
-//var sql = "SELECT * FROM poops WHERE poopid = '" + poopid + "';";
