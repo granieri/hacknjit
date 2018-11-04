@@ -26,7 +26,7 @@
       <div class="type_popup modal" id="type_modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <img src="../assets/bristol_stool_scale.png" />
+          <img src="../assets/poopref.png" />
         </div>
       </div>
     </div>
