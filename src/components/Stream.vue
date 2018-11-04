@@ -1,7 +1,5 @@
 <template>
   <div class="stream">
-    <card first="login.firstname" last="login.lastname" desc="poop.description" type="2"></card>
-    <card first="login.firstname" last="login.lastname" desc="poop.description" type="4"></card>
     <span v-for="poop in poops">
       <card :first="login.firstname" :last="login.lastname" :desc="poop.description" :date="poop.date" :type="poop.type"></card>
     </span>
@@ -43,6 +41,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 75vh;
+  width: 100vw;
 }
 
 h1, h2 {
@@ -60,5 +59,9 @@ a {
   color: #42b983;
 }
 
-
+@media screen and (min-width: 500px){
+  .stream {
+    flex-flow: row wrap; 
+  }
+}
 </style>

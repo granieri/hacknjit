@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Stream from '@/components/Stream'
 import New from '@/components/New'
 import Login from '@/components/Login'
+import Sent from '@/components/Sent'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       name: 'New',
       component: New,
       meta: { conditionalRoute: true }
+    },
+    {
+      path: '/sent',
+      name: 'sent',
+      component: Sent
     },
     {
       path: '*',
