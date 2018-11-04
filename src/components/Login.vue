@@ -1,7 +1,7 @@
 <template>
   <div class='login'>
     <span id="words">
-      <p>Welcome to LogLog, you're personal poop tracker!</p>
+      <p>Welcome to LogLog, your personal poop tracker!</p>
       <h2>Please login using your google account.</h2>
     </span>
     <div class='g-signin2' data-onsuccess='onSignIn' data-theme='dark'></div>
