@@ -4,6 +4,7 @@ const getpoop = require('./getpoop')
 const insertpoop = require('./insertpoop')
 const checkuser = require('./checkuser')
 const insertuser = require('./insertuser')
+const getinsight = require('./getinsight')
 const cors = require('cors')
 var app = express();
 
@@ -46,6 +47,13 @@ app.get('/checkuser/:userid/', function (req, res) {
 
 app.get('/insertuser/:userid/:firstname/:lastname/:email/', function (req, res) {
   insertuser.insertuser(req.params.userid, req.params.firstname, req.params.lastname, req.params.email)
+    .then(function(rows){
+      res.end(JSON.stringify(rows))
+    })
+})
+
+app.get('/getinsight/:userid/', function (req, res) {
+  getinsight.getinsight(req.params.userid)
     .then(function(rows){
       res.end(JSON.stringify(rows))
     })
