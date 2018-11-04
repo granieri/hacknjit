@@ -35,7 +35,8 @@ export default new Router({
     {
       path: '/insights',
       name: 'insights',
-      component: Insights
+      component: Insights,
+      meta: { conditionalRoute: true }
     },
     {
       path: '*',
