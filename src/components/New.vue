@@ -159,6 +159,7 @@ form {
     margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
+    text-align: center;
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
