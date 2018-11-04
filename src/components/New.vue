@@ -3,7 +3,7 @@
     <h3>Add a new log</h3>
     <form id="new">
     <div>
-      <label for="description">Description</label>
+      <label for="description">Notes</label>
       <textarea id="description" maxlength="240" />
       <div class="char_count"><span id="remaining">140</span>/140 remaining</div>
     </div>

@@ -23,10 +23,9 @@
 .user {
   background: #7a5c3d;
   height: 7vh;
-  width: 100%;
+  padding: 0 15px;
   display: flex;
   align-items: center;
-  padding: 0 10px;
   color: #fff;
 }
 
@@ -54,5 +53,14 @@
   width: 100%;
   height: 4vh;
   clear: both;
+}
+
+@media only screen and (min-width: 500px){
+  .card {
+    width: 30vw;
+    min-width: 300px;
+    margin: 2vh 2vw;
+    box-shadow: 5px 5px 0px 0px rgba(143,143,143,1);
+  }
 }
 </style>

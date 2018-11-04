@@ -120,4 +120,35 @@ nav .nav li i {
 #signOut {
   visibility: collapse;
 }
+
+@media only screen and (min-width: 500px){
+  header {
+    order: 1;
+    border: none !important;
+    height: 20vh;
+  }
+  header h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+  footer {
+    order: 2;
+    border-top: 0 solid #4f6d8c !important;
+    border-bottom: 3px solid #4f6d8c;
+    height: 8vh !important;
+  }
+  nav {
+    width: 40vw;
+    margin-right: 10vw;
+    float: right;
+  }
+  nav .nav li {
+    height: 8vh !important;
+    font-size: .9em !important;
+  }
+
+  #MainRV {
+    order: 3;
+  }
+}
 </style>
