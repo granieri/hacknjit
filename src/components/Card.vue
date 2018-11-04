@@ -4,7 +4,7 @@
       <span class="username">{{ first }} {{ last }}</span>
     </div>
     <div class="date">{{ date }}</div>
-    <div class="poop_icon" id="icon"></div>
+    <div :class="icon"></div>
     <section class="description">{{ desc }}</section>
     <section class="interact"></section>
   </article>
@@ -13,12 +13,10 @@
 <script>
 export default {
   name: 'card',
-  props: ['first', 'last', 'desc', 'type', 'date'],
-  mounted () {
-    let icon = document.getElementById('icon')
-    let class_name = 'icon-' + this.type
-    icon.classList.add(class_name)
-  }
+  data () {
+    return {icon: ['poop_icon', 'icon-' + this.type]}
+  },
+  props: ['first', 'last', 'desc', 'type', 'date']
 }
 </script>
 

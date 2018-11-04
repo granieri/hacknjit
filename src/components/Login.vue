@@ -47,7 +47,7 @@ export default {
 
   }
   .poop{
-    height: 20%;
+    height: 100px;
   }
 
 </style>

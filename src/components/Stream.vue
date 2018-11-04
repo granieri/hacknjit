@@ -1,5 +1,7 @@
 <template>
   <div class="stream">
+    <card first="login.firstname" last="login.lastname" desc="poop.description" type="2"></card>
+    <card first="login.firstname" last="login.lastname" desc="poop.description" type="4"></card>
     <span v-for="poop in poops">
       <card :first="login.firstname" :last="login.lastname" :desc="poop.description" :date="poop.date" :type="poop.type"></card>
     </span>
