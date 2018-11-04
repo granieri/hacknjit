@@ -78,9 +78,9 @@ export default {
 
     let send = document.getElementsByClassName('send')[0];
     let type = document.getElementById('type')
-    let url = 'http://localhost:8081/'
+    let url = 'http://localhost:8081'
     send.addEventListener('click', function(e){
-      axios.get(url+login.id+'/'+type.value+'/'+ desc.value+'/'+'/here')
+      axios.get(url+'/insertpoop/'+login.id+'/'+type.value+'/'+ desc.value+'/here')
     })
   }
 }

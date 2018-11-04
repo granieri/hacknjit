@@ -1,7 +1,7 @@
 <template>
   <div class="stream">
     <span v-for="poop in poops">
-      <card first="poop.user_id" desc="poop.description" date="poop.datetime"></card>
+      <card :first="login.firstname" :last="login.lastname" :desc="poop.description" :date="poop.date"></card>
     </span>
  </div>
 </template>
@@ -17,15 +17,17 @@ export default {
       login: login
     }
   },
-  mounted () {
+  beforeMount () {
     let url = 'http://localhost:8081'
     this.$store.dispatch('set_user', login)
-    console.log(this.$store.state.user)
-    axios.get(url+'/listpoop/'+5) //login.id
+
+    axios.get(url+'/listpoop/'+login.id)
       .then((response) => {
-        poops_data = response.data
-        for(let i=0;i<poops_data;i++){
-          poops.push(poops_data[i])
+        this.poops = response.data
+        for(let i=0;i<this.poops.length;i++){
+          let unix_time = this.poops[i].datetime
+          let dates = new Date(unix_time * 1000)
+          this.poops[i].date = dates.toString().slice(0,24)
         }
     })
   }
