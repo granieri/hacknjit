@@ -93,6 +93,7 @@ header h1 {
 
 nav .nav {
   list-style-type: none;
+  margin:0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -102,7 +103,8 @@ nav .nav {
 
 nav .nav li {
   display:block;
-  padding: 0px 25px 0px 25px;
+  background: #111111;
+  padding: 0px 40px;
   margin: 0px;
   display: flex;
   flex-direction: column;
@@ -112,21 +114,22 @@ nav .nav li {
   height: 10vh;
   color: #7a5c3d;
   text-align: center;
+  width: 33%;
 }
 
 nav .nav li i {
   font-size: 1.5em;
   color: #fff;
-  width: 50px;
+  width: auto;
 }
 
 nav .nav li span {
-  width: 50px;
+  width: auto;
 }
 
 .nav li:hover{
     background: #8798cc;
-    transition: background 0.5s;
+    transition: background 0.2s;
 }
 
 #signOut {
@@ -154,13 +157,74 @@ nav .nav li span {
     margin-right: 10vw;
     float: right;
   }
+
   nav .nav li {
     height: 8vh !important;
     font-size: .9em !important;
+    padding: 0px 20px;
+    background: none;
+
+  }
+  nav .nav li i {
+    width: 50px;
+  }
+
+  nav .nav li span {
+    width: 50px;
   }
 
   #MainRV {
     order: 3;
   }
+}
+
+@media only screen and (min-width: 700px){
+
+  nav .nav li {
+    padding: 0px 30px
+  }
+
+
+}
+@media only screen and (min-width: 900px){
+  nav .nav {
+    display:inline-flex;
+  }
+  nav .nav li i {
+    width: 75px;
+  }
+
+  nav .nav li span {
+    width: 75px;
+  }
+
+
+}
+
+@media only screen and (min-width: 1200px){
+
+  nav .nav li i {
+    width: 100px;
+  }
+
+  nav .nav li span {
+    width: 100px;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 1500px){
+
+  nav .nav li i {
+    width: 150px;
+  }
+
+  nav .nav li span {
+    width: 150px;
+  }
+
+
 }
 </style>
