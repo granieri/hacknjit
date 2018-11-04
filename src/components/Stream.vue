@@ -1,5 +1,6 @@
 <template>
   <div class="stream">
+    <card first="test" last="test" desc="test" type="1"></card>
     <span v-for="poop in poops">
       <card :first="login.firstname" :last="login.lastname" :desc="poop.description" :date="poop.date"></card>
     </span>
@@ -57,4 +58,6 @@ li {
 a {
   color: #42b983;
 }
+
+
 </style>

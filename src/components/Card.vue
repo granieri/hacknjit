@@ -4,9 +4,7 @@
       <span class="username">{{ first }} {{ last }}</span>
     </div>
     <div class="date">{{ date }}</div>
-    <div class="poop_icon">
-      <img :src="file_name" />
-    </div>
+    <div class="poop_icon" id="icon"></div>
     <section class="description">{{ desc }}</section>
     <section class="interact"></section>
   </article>
@@ -16,8 +14,10 @@
 export default {
   name: 'card',
   props: ['first', 'last', 'desc', 'type', 'date'],
-  computed: {
-    file_name () { '../assets/type' + this.type + 'poop.png' }
+  mounted () {
+    let icon = document.getElementById('icon')
+    let class_name = 'icon-' + this.type
+    icon.classList.add(class_name)
   }
 }
 </script>
@@ -63,6 +63,45 @@ export default {
   height: 4vh;
   clear: both;
 }
+
+.icon-1 {
+  background: url('../assets/type1poop.png') no-repeat;
+  background-size: 50px;
+}
+
+.icon-2 {
+  background: url('../assets/type2poop.png') no-repeat;
+  background-size: 50px;
+}
+
+.icon-3 {
+  background: url('../assets/type3poop.png') no-repeat;
+  background-size: 50px;
+}
+
+.icon-4 {
+  background: url('../assets/type4poop.png') no-repeat;
+  background-size: 50px;
+}
+
+.icon-5 {
+  background: url('../assets/type5poop.png') no-repeat;
+  background-size: 50px;
+}
+
+.icon-6 {
+  background: url('../assets/type6poop.png') no-repeat;
+  background-size: 50px;
+}
+
+
+.icon-7 {
+  background: url('../assets/type7poop.png') no-repeat;
+  background-size: 50px;
+}
+
+
+
 
 @media only screen and (min-width: 500px){
   .card {
