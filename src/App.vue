@@ -17,7 +17,7 @@
             <i class="fa fa-user"></i>
             <span>me</span>
           </router-link>
-          <router-link to="/" tag="li">
+          <router-link to="/insights" tag="li">
             <i class="fa fa-line-chart"></i>
             <span>insights</span>
           </router-link>

@@ -4,6 +4,7 @@ import Stream from '@/components/Stream'
 import New from '@/components/New'
 import Login from '@/components/Login'
 import Sent from '@/components/Sent'
+import Insights from '@/components/Insights'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/sent',
       name: 'sent',
       component: Sent
+    },
+    {
+      path: '/insights',
+      name: 'insights',
+      component: Insights
     },
     {
       path: '*',
