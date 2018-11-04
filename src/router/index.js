@@ -10,18 +10,20 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Stream',
+      component: Stream,
+      meta: { conditionalRoute: true }
+    },
+    {
+      path: '/login',
       name: 'Login',
       component: Login
     },
     {
-      path: '/stream',
-      name: 'Stream',
-      component: Stream
-    },
-    {
       path: '/new',
       name: 'New',
-      component: New
+      component: New,
+      meta: { conditionalRoute: true }
     },
     {
       path: '*',
