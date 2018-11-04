@@ -5,11 +5,21 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'Stream',
   data () {
     return {
+      poops: []
     }
+  },
+  created () {
+    let url = 'http://localhost:8081'
+    axios.get(url)
+      .then((response) => {
+        
+      });
   }
 }
 </script>
