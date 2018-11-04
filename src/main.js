@@ -6,6 +6,7 @@ import router from './router'
 import Card from './components/Card'
 import New from './components/New'
 import Login from './components/Login'
+import Stream from './components/Stream'
 import store from './store'
 
 Vue.config.productionTip = false
@@ -29,6 +30,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: { App, Login, New },
+  components: { App, Login, New, Stream },
   template: '<App/>'
 })

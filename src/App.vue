@@ -129,7 +129,6 @@ nav .nav li i {
   }
   header h1 {
     font-size: 4em;
-    margin-top:10px;
     margin-bottom: 0;
   }
   footer {

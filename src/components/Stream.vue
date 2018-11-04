@@ -15,15 +15,14 @@ export default {
       login: login
     }
   },
-  created () {
+  mounted () {
     let url = 'http://localhost:8081'
+    this.$store.dispatch('set_user', login);
+    console.log(this.$store.getters.get_user)
     axios.get(url+'/listpoops/'+login.id)
       .then((response) => {
-
+        console.log(response);
     })
-  },
-  mounted () {
-    console.log(login.id);
   }
 }
 </script>
