@@ -6,12 +6,21 @@
 </template>
 
 <script>
+import axios from 'axios'
 import {GoogleCharts} from 'google-charts';
 
 export default {
   data() {
     return {
-      poops_by_day: {}
+      poops_by_day: {
+        'sun': 1,
+        'mon': 2,
+        'tues': 4,
+        'wed': 5,
+        'thur': 3,
+        'fri': 0,
+        'sat': 0
+      }
     }
   },
   beforeMount () {
@@ -20,59 +29,62 @@ export default {
 
     axios.get(url+'/getinsight/'+login.id)
       .then((response) => {
-        res = response.data
+        let res = response.data
+        console.log(response.data)
         for(let i=0;i<res.length;i++){
           if(res[i].dayoftheweek == 1){
-            poops_by_day.mon = res.count
+            this.poops_by_day.mon = res.count
           } else if (res[i].dayoftheweek == 2){
-            poops_by_day.tues == res.count
+            this.poops_by_day.tues == res.count
           } else if (res[i].dayoftheweek == 3){
-            poops_by_day.wed == res.count
+            this.poops_by_day.wed == res.count
           } else if (res[i].dayoftheweek == 4){
-            poops_by_day.thur == res.count
+            this.poops_by_day.thur == res.count
           } else if (res[i].dayoftheweek == 5){
-            poops_by_day.fri == res.count
+            this.poops_by_day.fri == res.count
           } else if (res[i].dayoftheweek == 6){
-            poops_by_day.sat == res.count
+            this.poops_by_day.sat == res.count
           } else if (res[i].dayoftheweek == 7){
-            poops_by_day.sun == res.count
+            this.poops_by_day.sun == res.count
           }
           }
         })
+        .then(() => {
+          function drawChart(poos) {
+              const data = GoogleCharts.api.visualization.arrayToDataTable([
+                  ['Day', 'Bowel movements'],
+                  ['Sun', poos.sun],
+                  ['Mon', poos.mon],
+                  ['Tues', poos.tues],
+                  ['Wed', poos.wed],
+                  ['Thur', poos.thur],
+                  ['Fri', poos.fri],
+                  ['Sat', poos.sat]
+              ])
+              const options = {
+                title: 'Bowel movements this week',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                width: window.innerWidth
+              }
+
+              function resize () {
+                  options.width = window.innerWidth;
+                  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+                  chart.draw(data, options);
+              }
+
+             const line_chart = new GoogleCharts.api.visualization.LineChart(document.getElementById('chart_div'));
+             line_chart.draw(data, options);
+
+             window.onresize = resize
+
+          }
+          GoogleCharts.load(drawChart(this.poops_by_day));
+        })
   },
   mounted () {
-    GoogleCharts.load(drawChart);
 
-    function drawChart() {
-        const data = GoogleCharts.api.visualization.arrayToDataTable([
-            ['Day', 'Bowel movements'],
-            ['Sun', this.poops_by_day.sun],
-            ['Mon', this.poops_by_day.mon],
-            ['Tues', this.poops_by_day.tues],
-            ['Wed', this.poops_by_day.wed],
-            ['Thur', this.poops_by_day.thur],
-            ['Fri', this.poops_by_day.fri],
-            ['Sat', this.poops_by_day.sat]
-        ])
-        const options = {
-          title: 'Bowel movements this week',
-          curveType: 'function',
-          legend: { position: 'bottom' },
-          width: window.innerWidth
-        }
-
-        function resize () {
-            options.width = window.innerWidth;
-            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
-
-       const line_chart = new GoogleCharts.api.visualization.LineChart(document.getElementById('chart_div'));
-       line_chart.draw(data, options);
-
-       window.onresize = resize
-
-    }
   }
 }
 </script>
