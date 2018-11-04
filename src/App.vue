@@ -136,9 +136,12 @@ nav .nav li span {
   text-decoration: none;
   visibility: collapse;
   color: #7a5c3d;
+  background: #cccccc;
+  padding: 5px;
 }
 #signOut:hover {
   text-decoration: underline;
+  background: #eeeecc;
 }
 
 @media only screen and (min-width: 500px){
